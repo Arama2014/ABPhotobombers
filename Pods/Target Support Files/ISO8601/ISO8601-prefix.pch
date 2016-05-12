@@ -1,0 +1,20 @@
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#endif
+
+#if !__has_feature(nullability)
+//#   define __ASSUME_NONNULL_BEGIN      NS_ASSUME_NONNULL_BEGIN
+//#   define __ASSUME_NONNULL_END        NS_ASSUME_NONNULL_END
+//#   define __NULLABLE                  nullable
+//#else
+#   define __ASSUME_NONNULL_BEGIN
+#   define __ASSUME_NONNULL_END
+#   define __NULLABLE
+#define __nonnull
+#define nonnull
+#define __nullable
+#define nullable
+#endif
+
+
+//just create a pch file with this: 

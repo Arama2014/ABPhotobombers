@@ -1,0 +1,29 @@
+//
+//  PrefixHeader.pch
+//  PhotobombersNew
+//
+//  Created by Arama Brown on 3/26/16.
+//  Copyright (c) 2016 Arama Brown. All rights reserved.
+//
+
+#ifndef PhotobombersNew_PrefixHeader_pch
+#define PhotobombersNew_PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#if !__has_feature(nullability)
+//#   define __ASSUME_NONNULL_BEGIN      NS_ASSUME_NONNULL_BEGIN
+//#   define __ASSUME_NONNULL_END        NS_ASSUME_NONNULL_END
+//#   define __NULLABLE                  nullable
+//#else
+#   define __ASSUME_NONNULL_BEGIN
+#   define __ASSUME_NONNULL_END
+#   define __NULLABLE
+#define __nonnull
+#define nonnull
+#define __nullable
+#define nullable
+#endif
+
+#endif
